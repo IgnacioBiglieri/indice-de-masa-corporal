@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+<script>
+var peso = prompt ('Introduce tu peso en kg (utilizar . para los gramos. Ej: 70.100');
+document.write('<p>Tu peso es:'+peso+'KG</p>');
+var estatura = prompt('Introduce tu estatura en metro (utilizar . para los cm. Ej: 1.70)');
+document.write ('<p>Tu estatura es:'+ estatura+'M</p>');
+var estatura2= estatura* estatura;
+
+var masac=peso/estatura2;
+
+</script>
+
+<p style="width:300px;color:red;font-family:'Times New Roman', Times, serif;border:5px solid black;">Tu masa corporal es: <script>document.write(masac)</script> </p>
+<script>
+ if(masac <= 18.5){
+ document.write('Tu IMC es bajo');
+}else if (masac >18.5 && masac <=24 ){
+    document.write ('Tu IMC es normal');
+}else{
+    document.write('Tu IMC indica obesidad');
+}
+</script>
+
+</body>
+</html>
