@@ -8,7 +8,7 @@
 </head>
 <body>
 <script>
-var peso = prompt ('Introduce tu peso en kg (utilizar . para los gramos. Ej: 70.100');
+var peso = prompt ('Introduce tu peso en kg (utilizar . para los gramos. Ej: 70.10)');
 document.write('<p>Tu peso es:'+peso+'KG</p>');
 var estatura = prompt('Introduce tu estatura en metro (utilizar . para los cm. Ej: 1.70)');
 document.write ('<p>Tu estatura es:'+ estatura+'M</p>');
@@ -18,14 +18,24 @@ var masac=peso/estatura2;
 
 </script>
 
-<p style="width:300px;color:red;font-family:'Times New Roman', Times, serif;border:5px solid black;">Tu masa corporal es: <script>document.write(masac)</script> </p>
+<p style="width:300px;font-family:'Times New Roman', Times, serif;border:5px solid black;" id="paragraph">Tu masa corporal es: <script>document.write(masac)</script> </p>
 <script>
+
  if(masac <= 18.5){
- document.write('Tu IMC es bajo');
+
+    document.getElementById("paragraph").style.backgroundColor = "#ADD8E6"
+    document.write('Tu IMC es bajo');
+
 }else if (masac >18.5 && masac <=24 ){
+
+    document.getElementById("paragraph").style.backgroundColor = "#90EE90"
     document.write ('Tu IMC es normal');
+
 }else{
+
+    document.getElementById("paragraph").style.backgroundColor = "#FF7F7F"
     document.write('Tu IMC indica obesidad');
+
 }
 </script>
 
